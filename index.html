@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car rice</title>
+</head>
+<style>
+    
+    .main{
+        width: 100%;
+        height: 700px;
+        background-image: url("race.jpg");
+        background-repeat: no-repeat;
+        } 
+    #car1{
+        width: 300px;
+        height: 300px;
+        margin-top: 100px;
+        margin-left: 10px;
+        position: absolute;
+    }
+    #car2{
+        width: 200px;
+        height: 300px;
+        margin-top: 250px;
+        margin-left: 50px;
+    }
+</style>
+<body>
+    <input onkeypress="car(event)" type="text" style="margin: 10px; margin-left:  500px;">
+    <div class="main" >
+        <img id="car1" src="car.png">
+        <img id="car2" src="1-removebg-preview.png">
+    </div>
+<script>
+    let car1=30;
+    let car2=30;
+    let c1=document.getElementById('car1');
+    let c2=document.getElementById('car2');
+    function car(event){
+        let e=event.which;
+        // s=117, k=107
+        if(e==115){
+            car1+=10;
+            document.getElementById('car1').style.marginLeft=car1+"px";
+        }
+        if(car1>660){
+            alert('тоглогч 1 хожлоо')
+        }
+        if(e==107){
+            car2+=10;
+            document.getElementById('car2').style.marginLeft=car2+"px";
+        }
+        if(car2>660){
+            alert('тоглогч 2 хожлоо')
+        }
+    }
+</script>
+</body>
+</html>
